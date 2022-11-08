@@ -1,0 +1,17 @@
+@media(max-width:1190px) {
+    #features {
+        height: auto;
+    }
+
+    .a-container {
+        flex-wrap: wrap;
+    }
+
+    .a-box {
+        flex-grow: 1;
+    }
+
+    .a-b-img img {
+        object-fit: contain;
+    }
+}
