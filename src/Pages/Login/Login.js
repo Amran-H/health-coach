@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -13,20 +14,21 @@ const Login = () => {
                     <img className='' src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=2000" alt="" />
 
                 </div>
-                <div className="card  w-full max-w-md shadow-2xl bg-base-100">
+                <div className="card  w-full max-w-md shadow-2xl bg-base-100 p-8">
                     <form onSubmit={handleLogin} className="card-body">
                         <h1 className="text-center text-5xl font-bold">Login now!</h1>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="text" placeholder="email" className="input input-bordered" />
+                            <input type="text" placeholder="email"
+                                name='email' className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" placeholder="password" className="input input-bordered" />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
@@ -35,6 +37,8 @@ const Login = () => {
                             <input className="btn btn-primary" type="submit" value="Login" />
                         </div>
                     </form>
+
+                    <p className='px-8 text-center font-bold '>Don't have an account? Please <Link to='/signup' className='text-orange-600 '>Sign Up</Link> </p>
                 </div>
             </div>
         </div>
