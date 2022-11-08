@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 
     const menuItmes = <>
-        <li><Link to="/">Home</Link></li>
+        <li className='font-semibold'><Link to="/">Home</Link></li>
+        <li className='font-semibold'><Link to="/">Home</Link></li>
     </>
 
     return (

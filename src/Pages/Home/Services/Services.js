@@ -11,12 +11,12 @@ const Services = () => {
 
     return (
         <div>
-            <div className='text-center'>
+            <div className='text-center mb-6 '>
                 <h1 className=' text-5xl text-center mb-6  '><span className='hover:italic'>Services</span></h1>
-                <p >I am delighted to be able to share with you the techniques I have learnt over the years <br />
+                <p className='text-xl'>I am delighted to be able to share with you the techniques I have learnt over the years <br />
                     that have brought me much happiness and success.</p>
             </div>
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
+            <div className='grid  gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
 
                 {
                     services.map(service => <ServiceCard
@@ -24,6 +24,9 @@ const Services = () => {
                         service={service}
                     ></ServiceCard>)
                 }
+            </div>
+            <div className="card-actions justify-center m-10">
+                <button className="btn btn-primary ">See All Services</button>
             </div>
         </div>
     );
