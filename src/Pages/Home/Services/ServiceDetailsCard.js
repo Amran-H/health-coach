@@ -14,10 +14,12 @@ const ServiceDetailsCard = () => {
                     <h2 className="card-title text-4xl">{title}</h2>
                     <p className='font-bold text-xl text-orange-500'>Price: ${price}</p>
                     <p className='text-xl font-semibold w-3/4'>{description}</p>
-                    <div className="card-actions">
-                        <button className="btn btn-primary">Buy Now</button>
-                    </div>
+
                 </div>
+            </div>
+
+            <div className=" text-center my-16">
+                <button className="btn btn-primary">Add Review</button>
             </div>
         </div>
     );
