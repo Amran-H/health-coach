@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 
     const menuItmes = <>
-        <li className='font-semibold'><Link to="/">Home</Link></li>
-        <li className='font-semibold'><Link to="/login">Login</Link></li>
+        <li className='font-semibold hover:text-orange-600'><Link to="/">Home</Link></li>
+        <li className='font-semibold hover:text-orange-600'><Link to="/services">Services</Link></li>
+        <li className='font-semibold hover:text-orange-600'><Link to="/blog">Blogs</Link></li>
+        <li className='font-semibold hover:text-orange-600'><Link to="/login">Login</Link></li>
     </>
 
     return (

@@ -8,7 +8,7 @@ const BannerItem = ({ slide }) => {
             <div className='carousal-img'>
                 <img src={image} alt="" className=" w-full rounded-xl" />
             </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-24 top-1/3">
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-24 top-1/4">
                 <p className='text-6xl font-bold text-white'>Your very own <br /> personal health coach</p>
             </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-24 top-2/4">

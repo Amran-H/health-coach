@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
@@ -25,9 +26,7 @@ const Services = () => {
                     ></ServiceCard>)
                 }
             </div>
-            <div className="card-actions justify-center m-10">
-                <button className="btn btn-primary ">See All Services</button>
-            </div>
+
         </div>
     );
 };
