@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import ServiceCard from './ServiceCard';
+import AddReview from '../AddReview/AddReview';
 
-const Services = () => {
+const ServiceForReview = () => {
+
     const [services, setServices] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -19,10 +20,10 @@ const Services = () => {
             <div className='grid  gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
 
                 {
-                    services.map(service => <ServiceCard
+                    services.map(service => <AddReview
                         key={service._id}
                         service={service}
-                    ></ServiceCard>)
+                    ></AddReview>)
                 }
             </div>
 
@@ -30,4 +31,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default ServiceForReview;

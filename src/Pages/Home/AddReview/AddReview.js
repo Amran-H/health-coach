@@ -1,11 +1,20 @@
 import React from 'react';
 
-const AddReview = () => {
+const AddReview = ({ service }) => {
 
-
+    // const { _id, title, price, img, description } = service;
 
     const handlePlaceReview = event => {
         event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const phone = form.phone.value;
+        const comment = form.comment.value;
+
+        const order = {
+
+        }
 
     }
     return (
