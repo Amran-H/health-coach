@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import ReviewRow from '../AddReview/ReviewRow';
 
 const ServiceDetailsCard = () => {
     const { title, img, price, description } = useLoaderData();
@@ -16,6 +17,9 @@ const ServiceDetailsCard = () => {
                     <p className='text-xl font-semibold w-3/4'>{description}</p>
 
                 </div>
+            </div>
+            <div>
+                {/* <ReviewRow></ReviewRow> */}
             </div>
 
             <div className=" text-center my-16">
