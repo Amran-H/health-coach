@@ -5,7 +5,7 @@ import { GoogleAuthProvider } from 'firebase/auth';
 
 const Header = () => {
 
-    const { providerLogin } = useContext(AuthContext);
+    const { providerLogin, user } = useContext(AuthContext);
 
     const googleProvider = new GoogleAuthProvider()
 
@@ -42,6 +42,10 @@ const Header = () => {
                 <ul className="menu menu-horizontal p-0">
                     {menuItmes}
                 </ul>
+            </div>
+
+            <div className="navbar-end">
+                <p>{user?.displayName}</p>
             </div>
             <div className="navbar-end">
                 <button onClick={handleGoogleSignIn} className='btn btn-outline btn-warning'>Login with google</button>
