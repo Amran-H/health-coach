@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ReviewRow = ({ review }) => {
-    const { _id, customer, comment, email, } = review;
+    const { customer, comment, email, } = review;
     return (
         <div>
 

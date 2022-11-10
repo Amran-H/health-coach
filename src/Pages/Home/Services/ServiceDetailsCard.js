@@ -18,8 +18,10 @@ const ServiceDetailsCard = () => {
 
                 </div>
             </div>
-            <div>
-                {/* <ReviewRow></ReviewRow> */}
+            <div className=" text-center my-16">
+                <Link to='/review'>
+                    <button className="btn btn-primary">view Review</button>
+                </Link>
             </div>
 
             <div className=" text-center my-16">

@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Header = () => {
+
+    const { providerLogin } = useContext(AuthContext);
+
+    const googleProvider = new GoogleAuthProvider()
+
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(res => {
+                const user = res.user;
+                console.log(user)
+            })
+            .catch(e => console.error(e));
+    }
 
     const menuItmes = <>
         <li className='font-semibold hover:text-orange-600'><Link to="/">Home</Link></li>
@@ -29,7 +44,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className='btn btn-outline btn-warning'>Login</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-outline btn-warning'>Login with google</button>
             </div>
         </div>
     );
